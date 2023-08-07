@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\PayZen\Message;
+namespace Omnipay\PayZenLat\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 

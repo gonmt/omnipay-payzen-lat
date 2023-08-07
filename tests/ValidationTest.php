@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\PayZen;
+namespace Omnipay\PayZenLat;
 use PHPUnit\Framework\TestCase;
 
 class ValidationTest extends TestCase

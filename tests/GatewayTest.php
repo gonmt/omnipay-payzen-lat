@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\PayZen;
+namespace Omnipay\PayZenLat;
 
 use Omnipay\Tests\GatewayTestCase;
 
@@ -17,7 +17,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->purchase(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\PayZen\Message\PurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\PurchaseRequest', $request);
         $this->assertSame(1000, $request->getAmountInteger());
         $this->assertSame('PAYMENT', $request->getData()['vads_page_action']);
         $this->assertArrayNotHasKey('vads_identifier', $request->getData());
@@ -27,7 +27,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->completePurchase(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\PayZen\Message\CompletePurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\CompletePurchaseRequest', $request);
         $this->assertSame(1000, $request->getAmountInteger());
     }
 
@@ -35,7 +35,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->purchase(array('amount' => '10.00', 'createCard' => true));
 
-        $this->assertInstanceOf('Omnipay\PayZen\Message\PurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\PurchaseRequest', $request);
         $this->assertSame('REGISTER_PAY', $request->getData()['vads_page_action']);
         $this->assertArrayNotHasKey('vads_identifier', $request->getData());
     }
@@ -44,7 +44,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->purchase(array('amount' => '10.00', 'cardReference' => 'a card reference'));
 
-        $this->assertInstanceOf('Omnipay\PayZen\Message\PurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\PurchaseRequest', $request);
         $this->assertSame('PAYMENT', $request->getData()['vads_page_action']);
         $this->assertSame('a card reference', $request->getData()['vads_identifier']);
     }
@@ -53,7 +53,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->createCard(array());
 
-        $this->assertInstanceOf('Omnipay\PayZen\Message\CreateCardRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\CreateCardRequest', $request);
         $this->assertSame('REGISTER', $request->getData()['vads_page_action']);
     }
 }

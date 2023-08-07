@@ -1,5 +1,5 @@
 <?php
-namespace Omnipay\PayZen;
+namespace Omnipay\PayZenLat;
 
 use Omnipay\Common\AbstractGateway;
 
@@ -36,21 +36,21 @@ class Gateway extends AbstractGateway
 
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\PurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\PurchaseRequest', $parameters);
     }
 
     public function completePurchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\CompletePurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\CompletePurchaseRequest', $parameters);
     }
 
     public function createCard(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\CreateCardRequest', $parameters);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\CreateCardRequest', $parameters);
     }
 
     public function completeCardCreation(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\CompleteCardCreationRequest', $parameters);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\CompleteCardCreationRequest', $parameters);
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Omnipay\PayZen\Message;
+namespace Omnipay\PayZenLat\Message;
 use DateTime;
 use Exception;
 use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\PayZen\Validation;
+use Omnipay\PayZenLat\Validation;
 
 /**
  * PayZen Purchase Request

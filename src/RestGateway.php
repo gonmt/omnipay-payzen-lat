@@ -1,5 +1,5 @@
 <?php
-namespace Omnipay\PayZen;
+namespace Omnipay\PayZenLat;
 
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Message\RequestInterface;
@@ -40,12 +40,12 @@ class RestGateway extends AbstractGateway
      */
     public function purchase(array $parameters = []): RequestInterface
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\RestPurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\RestPurchaseRequest', $parameters);
     }
 
     public function completePurchase(array $options = []): RequestInterface
     {
-        return $this->createRequest('\Omnipay\PayZen\Message\CompleteRestPurchaseRequest', $options);
+        return $this->createRequest('\Omnipay\PayZenLat\Message\CompleteRestPurchaseRequest', $options);
     }
 
     public function setUsername(string $value): self

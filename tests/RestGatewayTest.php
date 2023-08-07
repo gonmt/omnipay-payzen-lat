@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\PayZen;
+namespace Omnipay\PayZenLat;
 
 use Omnipay\Tests\GatewayTestCase;
 
@@ -15,6 +15,6 @@ class RestGatewayTest extends GatewayTestCase
     public function testPurchase()
     {
         $request = $this->gateway->purchase([]);
-        $this->assertInstanceOf('Omnipay\PayZen\Message\RestPurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\PayZenLat\Message\RestPurchaseRequest', $request);
     }
 }

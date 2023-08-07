@@ -1,5 +1,5 @@
 <?php
-namespace Omnipay\PayZen\Message;
+namespace Omnipay\PayZenLat\Message;
 
 class RestDirectPurchaseResponse extends RestResponse
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Payzen\Message;
+namespace Omnipay\PayZenLat\Message;
 
 use Omnipay\Common\Exception\InvalidResponseException;
 

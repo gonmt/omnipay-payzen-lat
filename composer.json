@@ -19,7 +19,7 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Omnipay\\PayZen\\" : "src/" }
+        "psr-4": { "Omnipay\\PayZenLat\\" : "src/" }
     },
     "require": {
         "php": "^7.2|^8",

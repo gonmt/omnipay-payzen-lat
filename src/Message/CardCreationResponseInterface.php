@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\PayZen\Message;
+namespace Omnipay\PayZenLat\Message;
 
 interface CardCreationResponseInterface
 {
