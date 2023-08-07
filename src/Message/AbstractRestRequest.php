@@ -11,7 +11,7 @@ abstract class AbstractRestRequest extends OmniPayAbstractRequest
      * Rest API endpoint
      * @var string
      */
-    protected $liveEndPoint = "https://api.payzen.eu";
+    protected $liveEndPoint = "https://api.payzen.lat";
 
     /**
      * Send data to payzen Rest API as a GET or a POST

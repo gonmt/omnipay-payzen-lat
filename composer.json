@@ -23,10 +23,18 @@
     },
     "require": {
         "php": "^7.2|^8",
-        "omnipay/common": "^3.0"
+        "omnipay/common": "^3",
+        "symfony/http-client": "^5.4",
+        "ext-json": "*"
     },
     "require-dev": {
         "omnipay/tests": "^4.0",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^8.5",
+        "http-interop/http-factory-guzzle": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }

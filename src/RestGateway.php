@@ -29,6 +29,8 @@ class RestGateway extends AbstractGateway
             'password' => '',
             'testPassword' => '',
             'testMode' => true,
+            'withForm' => false,
+            'hmacKey' => '',
         ];
     }
 
@@ -36,59 +38,63 @@ class RestGateway extends AbstractGateway
      * @param array $parameters
      * @return RequestInterface
      */
-    public function purchase(array $parameters = [])
+    public function purchase(array $parameters = []): RequestInterface
     {
         return $this->createRequest('\Omnipay\PayZen\Message\RestPurchaseRequest', $parameters);
     }
 
-    /**
-     * @param string
-     * @return self
-     */
-    public function setUsername($value)
+    public function completePurchase(array $options = []): RequestInterface
+    {
+        return $this->createRequest('\Omnipay\PayZen\Message\CompleteRestPurchaseRequest', $options);
+    }
+
+    public function setUsername(string $value): self
     {
         return $this->setParameter('username', $value);
     }
 
-    /**
-     * @return self
-     */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->getParameter('username');
     }
 
-    /**
-     * @param string
-     * @return self
-     */
-    public function setPassword($value)
+    public function setPassword(string $value): self
     {
         return $this->setParameter('password', $value);
     }
 
-    /**
-     * @return string
-     * @return self
-     */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->getParameter('password');
     }
 
-    /**
-     * @param string
-     */
-    public function setTestPassword($value)
+    public function setTestPassword(string $value): self
     {
         return $this->setParameter('testPassword', $value);
     }
 
-    /**
-     * @return string
-     */
-    public function getTestPassword()
+    public function getTestPassword(): string
     {
         return $this->getParameter('testPassword');
+    }
+
+    public function setHmacKey(string $hashKey): self
+    {
+        return $this->setParameter('hmacKey', $hashKey);
+    }
+
+    public function getHmacKey(): string
+    {
+        return $this->getParameter('hmacKey');
+    }
+
+    public function getWithForm(): bool
+    {
+        return $this->getParameter('withForm');
+    }
+
+    public function setWithForm(bool $value): self
+    {
+        return $this->setParameter('withForm', $value);
     }
 }
