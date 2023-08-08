@@ -34,6 +34,16 @@ class CompleteRestPurchaseRequest extends OmniPayAbstractRequest
         return $this->getParameter('hmacKey');
     }
 
+    public function setUsername(string $value): self
+    {
+        return $this->setParameter('username', $value);
+    }
+
+    public function getUsername(): string
+    {
+        return $this->getParameter('username');
+    }
+
     public function setPassword(string $value): self
     {
         return $this->setParameter('password', $value);
@@ -42,6 +52,16 @@ class CompleteRestPurchaseRequest extends OmniPayAbstractRequest
     public function getPassword(): string
     {
         return $this->getParameter('password');
+    }
+
+    public function setTestPassword(string $value): self
+    {
+        return $this->setParameter('testPassword', $value);
+    }
+
+    public function getTestPassword(): string
+    {
+        return $this->getParameter('testPassword');
     }
 
     public function getHashKey(): string

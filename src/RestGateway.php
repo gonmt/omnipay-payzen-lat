@@ -29,8 +29,6 @@ class RestGateway extends AbstractGateway
             'password' => '',
             'testPassword' => '',
             'testMode' => true,
-            'withForm' => false,
-            'hmacKey' => '',
         ];
     }
 
@@ -76,25 +74,5 @@ class RestGateway extends AbstractGateway
     public function getTestPassword(): string
     {
         return $this->getParameter('testPassword');
-    }
-
-    public function setHmacKey(string $hashKey): self
-    {
-        return $this->setParameter('hmacKey', $hashKey);
-    }
-
-    public function getHmacKey(): string
-    {
-        return $this->getParameter('hmacKey');
-    }
-
-    public function getWithForm(): bool
-    {
-        return $this->getParameter('withForm');
-    }
-
-    public function setWithForm(bool $value): self
-    {
-        return $this->setParameter('withForm', $value);
     }
 }
