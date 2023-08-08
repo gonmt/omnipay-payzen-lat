@@ -1,7 +1,7 @@
 {
-    "name": "ubitransports/omnipay-payzen",
+    "name": "gonmt/omnipay-payzen-lat",
     "type": "library",
-    "description": "PayZen driver for the Omnipay payment processing library",
+    "description": "PayZen Lat driver for the Omnipay payment processing library",
     "keywords": [
         "gateway",
         "merchant",
@@ -10,12 +10,16 @@
         "payment",
         "payzen"
     ],
-    "homepage": "https://github.com/ubitransports/omnipay-payzen",
+    "homepage": "https://github.com/gonmt/omnipay-payzen-lat.git",
     "license": "MIT",
     "authors": [
         {
             "name": "Ubi Transports",
             "homepage": "https://github.com/ubitransports"
+        },
+        {
+            "name": "Gonzalo Torres",
+            "email": "torresgonzalom@gmail.com"
         }
     ],
     "autoload": {
