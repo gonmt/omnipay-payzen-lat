@@ -1,6 +1,6 @@
-# Omnipay: PayZen  
+# Omnipay: PayZen Latam
 
-**PayZen driver for the Omnipay PHP payment processing library**
+**PayZen Latam driver for the Omnipay PHP payment processing library**
 
 [![Build Status](https://travis-ci.org/ubitransports/omnipay-payzen.png?branch=master)](https://travis-ci.org/ubitransports/omnipay-payzen)
 [![Latest Stable Version](https://poser.pugx.org/ubitransports/omnipay-payzen/version.png)](https://packagist.org/packages/ubitransports/omnipay-payzen)
@@ -17,7 +17,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "ubitransports/omnipay-payzen": "dev-master"
+        "gonmt/omnipay-payzen-lat": "*"
     }
 }
 ```
@@ -31,7 +31,7 @@ And run composer to update your dependencies:
 
 The following gateways are provided by this package:
 
-* PayZen
+* PayZenLat_Rest
 
 For general usage instructions, please see the main [Omnipay](https://github.com/omnipay/omnipay)
 repository.
